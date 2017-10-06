@@ -353,11 +353,11 @@ PRODUCT_PACKAGES += \
     sensors.cheeseburger
 
 # SOTER (Fingerprint support for WeChat Payment)
-PRODUCT_PACKAGES += \
-    soter
+# PRODUCT_PACKAGES += \
+#     soter
 
-PRODUCT_BOOT_JARS += \
-    soter
+# PRODUCT_BOOT_JARS += \
+#     soter
 
 # Thermal
 PRODUCT_PACKAGES += \
