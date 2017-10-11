@@ -379,6 +379,6 @@
     <integer name="config_extraFreeKbytesAbsolute">-1</integer>
 
     <!-- True if camera app should be pinned via Pinner Service -->
-    <bool name="config_pinnerCameraApp">true</bool>
+    <!-- <bool name="config_pinnerCameraApp">true</bool> -->
 
 </resources>
