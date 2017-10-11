@@ -20,7 +20,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Whether notify fingerprint client of successful cancelled authentication -->
-    <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
+    <!-- <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool> -->
 
     <!-- Wether device has dash charging support -->
     <bool name="config_hasDashCharger">true</bool>
