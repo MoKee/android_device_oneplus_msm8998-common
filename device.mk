@@ -368,6 +368,7 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    libshims_rilqc \
     librmnetctl \
     libxml2 \
     libprotobuf-cpp-full
@@ -380,10 +381,6 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-service \
     context_hub.default \
     sensors.cheeseburger
-
-# Shims
-PRODUCT_PACKAGES += \
-    libshims_system_properties
 
 # SOTER (Fingerprint support for WeChat Payment)
 PRODUCT_PACKAGES += \
