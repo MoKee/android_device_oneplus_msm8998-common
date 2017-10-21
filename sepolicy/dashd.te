@@ -9,7 +9,6 @@ allow dashd kmsg_device:chr_file { rw_file_perms };
 
 allow dashd self:capability { net_admin sys_tty_config };
 wakelock_use(dashd)
-allow dashd self:netlink_kobject_uevent_socket { create_socket_perms };
 binder_use(dashd)
 binder_service(dashd)
 binder_call(dashd, system_server)
@@ -36,6 +35,7 @@ allow dashd self:capability { sys_boot dac_override};
 allow dashd device:dir { open read write } ;
 #allow dashd device:chr_file { write read };
 
+allow dashd proc_stat:file { r_file_perms };
 allow dashd sysfs_batteryinfo:file { r_file_perms };
 
 r_dir_file(dashd, sysfs_usb_supply);

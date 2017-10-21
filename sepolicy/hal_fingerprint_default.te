@@ -1,0 +1,4 @@
+allow hal_fingerprint_default sysfs_fpc_irq:file { write read open };
+allow hal_fingerprint_default sysfs_fpc_screen:file { read open };
+allow hal_fingerprint_default tee_device:chr_file { ioctl read write open };
+allow hal_fingerprint_default servicemanager:binder { transfer call };
