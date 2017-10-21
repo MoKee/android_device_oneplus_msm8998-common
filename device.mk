@@ -378,11 +378,8 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.contexthub@1.0-impl \
-    android.hardware.contexthub@1.0-service \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service \
-    context_hub.default \
     sensors.cheeseburger
 
 # SOTER (Fingerprint support for WeChat Payment)
