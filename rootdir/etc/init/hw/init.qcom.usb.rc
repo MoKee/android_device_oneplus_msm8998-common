@@ -25,7 +25,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import init.qcom.usb.configfs.rc
+import /vendor/etc/init/hw/init.qcom.usb.configfs.rc
 
 on boot
     mkdir /dev/usb-ffs 0770 shell shell
@@ -91,7 +91,7 @@ on charger
     setprop sys.usb.config mass_storage
     setprop sys.usb.configfs 1
 
-service qcom-usb-sh /system/bin/sh /init.qcom.usb.sh
+service qcom-usb-sh /vendor/bin/init.qcom.usb.sh
     class core
     user root
     oneshot
