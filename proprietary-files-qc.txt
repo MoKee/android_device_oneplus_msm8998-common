@@ -248,8 +248,10 @@ lib64/vendor.qti.gnss@1.0.so
 vendor/bin/hw/vendor.qti.gnss@1.0-service
 vendor/etc/init/vendor.qti.gnss@1.0-service.rc
 vendor/lib/hw/vendor.qti.gnss@1.0-impl.so
+vendor/lib/libgnsspps.so
 vendor/lib/vendor.qti.gnss@1.0_vendor.so
 vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so
+vendor/lib64/libgnsspps.so
 vendor/lib64/vendor.qti.gnss@1.0_vendor.so
 vendor/bin/xtra-daemon
 vendor/etc/xtra_root_cert.pem
