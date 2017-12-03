@@ -326,8 +326,6 @@ vendor/lib64/libsdmextension.so
 vendor/lib64/libhdr_tm.so
 lib64/libsd_sdk_display.so
 lib/libsd_sdk_display.so
-vendor/lib64/vendor.display.config@1.0_vendor.so
-vendor/lib/vendor.display.config@1.0_vendor.so
 
 # Keystore
 vendor/lib/hw/keystore.msm8998.so
