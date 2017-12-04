@@ -375,6 +375,10 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     libandroid_net
 
+PRODUCT_BOOT_JARS += \
+    qcnvitems \
+    qcrilhook
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
