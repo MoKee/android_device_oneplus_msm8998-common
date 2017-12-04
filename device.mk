@@ -379,6 +379,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sys.sdcardfs=false
 
+PRODUCT_BOOT_JARS += \
+    qcnvitems \
+    qcrilhook
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
