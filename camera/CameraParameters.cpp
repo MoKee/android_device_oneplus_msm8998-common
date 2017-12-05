@@ -180,6 +180,7 @@ CAMERA_PARAMETERS_EXTRA_C
 
 #ifdef VENDOR_ONEPLUS
 char gClientPackageName[50] = "com.oneplus.camera";
+char lClientPackageName[50] = "com.oneplus.camera";
 #endif
 
 CameraParameters::CameraParameters()
