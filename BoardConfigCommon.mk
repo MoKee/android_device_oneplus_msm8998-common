@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The MoKee Open Source Project
+# Copyright (C) 2017-2018 The MoKee Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -25,19 +25,15 @@
 # Inherit from oneplus-common
 -include device/oneplus/common/BoardConfigCommon.mk
 
-PLATFORM_PATH := device/oneplus/cheeseburger
+PLATFORM_PATH := device/oneplus/msm8998-common
 
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
-
-# Assertions
-TARGET_BOARD_INFO_FILE := $(PLATFORM_PATH)/board-info.txt
-TARGET_OTA_ASSERT_DEVICE := OnePlus5,cheeseburger
 
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := cheeseburger
+TARGET_BOOTLOADER_BOARD_NAME := msm8998
 TARGET_NO_BOOTLOADER := true
 
 # Platform
@@ -118,7 +114,6 @@ USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_PATH)/bluetooth
 BOARD_HAS_QCA_BT_ROME := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
@@ -242,4 +237,4 @@ WIFI_DRIVER_MODULE_NAME := "wlan"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
--include vendor/oneplus/cheeseburger/BoardConfigVendor.mk
+-include vendor/oneplus/msm8998-common/BoardConfigVendor.mk
