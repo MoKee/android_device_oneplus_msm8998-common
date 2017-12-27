@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2017 The MoKee Open Source Project
+# Copyright (C) 2017-2018 The MoKee Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,9 +16,6 @@
 #
 
 set -e
-
-DEVICE=cheeseburger
-VENDOR=oneplus
 
 INITIAL_COPYRIGHT_YEAR=2017
 
@@ -36,10 +33,10 @@ fi
 . "$HELPER"
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$MK_ROOT"
+setup_vendor "$DEVICE_COMMON" "$VENDOR" "$MK_ROOT" true
 
 # Copyright headers and guards
-write_headers
+write_headers "cheeseburger dumpling"
 
 # The standard blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt
@@ -80,3 +77,19 @@ EOF
 
 # Finish
 write_footers
+
+
+if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
+    # Reinitialize the helper for device
+    INITIAL_COPYRIGHT_YEAR="$DEVICE_BRINGUP_YEAR"
+    setup_vendor "$DEVICE" "$VENDOR" "$MK_ROOT" false
+
+    # Copyright headers and guards
+    write_headers
+
+    # The standard device blobs
+    write_makefiles "$MY_DIR"/../$DEVICE/proprietary-files.txt
+
+    # We are done!
+    write_footers
+fi
