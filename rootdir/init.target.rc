@@ -150,6 +150,10 @@ on boot
     chmod 0660 /sys/devices/virtual/graphics/fb0/color_profile
     chmod 0660 /sys/devices/virtual/graphics/fb0/night_mode
 
+    # Fingerprint Detect
+    chmod 0440 /sys/devices/soc/soc:fingerprint_detect/sensor_version
+    chown system system /sys/devices/soc/soc:fingerprint_detect/sensor_version
+
     # Fingerprint FPC
     chmod 0664 /sys/devices/soc/soc:fpc_fpc1020/irq
     chown system system /sys/devices/soc/soc:fpc_fpc1020/irq
