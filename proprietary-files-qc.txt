@@ -48,6 +48,7 @@ vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libaudcal.so
 vendor/lib/libhwdaphal.so
+vendor/lib/libqtigef.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
@@ -57,6 +58,7 @@ vendor/lib64/libacdbrtac.so
 vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
 vendor/lib64/libhwdaphal.so
+vendor/lib64/libqtigef.so
 vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
@@ -126,6 +128,7 @@ etc/dpm/nsrm/NsrmConfiguration.xml
 etc/permissions/com.qti.dpmframework.xml
 etc/permissions/dpmapi.xml
 framework/com.qti.dpmframework.jar
+framework/dpm.jar
 framework/dpmapi.jar
 framework/tcmclient.jar
 -priv-app/dpmserviceapp/dpmserviceapp.apk
@@ -144,8 +147,20 @@ vendor/lib64/libdpmtcm.so
 bin/qseecomd
 bin/init.qti.qseecomd.sh
 vendor/bin/qseeproxydaemon
+vendor/lib/libdrmfs.so
+vendor/lib/libdrmtime.so
+vendor/lib/libGPreqcancel_svc.so
+vendor/lib/libGPreqcancel.so
+vendor/lib/libqisl.so
 vendor/lib/libQSEEComAPI.so
+vendor/lib/librpmb.so
+vendor/lib/libsecureui_svcsock.so
+vendor/lib/libsecureui.so
+vendor/lib/libSecureUILib.so
+vendor/lib/libssd.so
 vendor/lib/libspl.so
+vendor/lib/libStDrvInt.so
+vendor/lib/libtzdrmgenprov.so
 vendor/lib64/lib-sec-disp.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
@@ -160,6 +175,7 @@ vendor/lib64/libSecureUILib.so
 vendor/lib64/libssd.so
 vendor/lib64/libspl.so
 vendor/lib64/libStDrvInt.so
+vendor/lib64/libtzdrmgenprov.so
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.msm8998.so
@@ -236,6 +252,8 @@ vendor/lib/libsd_sdk_display.so
 vendor/lib/libsdm-color.so
 -vendor/lib/libsdm-disp-apis.so
 vendor/lib/libtinyxml2_1.so
+vendor/lib/libsdm-diag.so
+vendor/lib/libsdmextension.so
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
 vendor/lib64/egl/libGLESv1_CM_adreno.so
@@ -268,6 +286,19 @@ vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
 vendor/lib64/libuiblur.so|4b3fabf5ded7c4af531abde681676fc5e9248494
 
+# Improvetouch
+etc/firmware/hbtp/hbtpcfg.dat
+etc/firmware/hbtp/hbtpcfg2.dat
+vendor/bin/hbtp_daemon
+vendor/lib/libhbtpclient.so
+vendor/lib/libhbtpdsp.so
+vendor/lib/libhbtpfrmwk.so
+vendor/lib/libhbtpjni.so
+vendor/lib64/libhbtpclient.so
+vendor/lib64/libhbtpdsp.so
+vendor/lib64/libhbtpfrmwk.so
+vendor/lib64/libhbtpjni.so
+
 # Keystore
 vendor/lib/hw/keystore.msm8998.so
 vendor/lib64/hw/keystore.msm8998.so
@@ -275,32 +306,33 @@ vendor/lib64/hw/keystore.msm8998.so
 # Listen
 vendor/lib/hw/sound_trigger.primary.msm8998.so
 vendor/lib/libsmwrapper.so
+vendor/lib64/hw/sound_trigger.primary.msm8998.so
 
 # Media
--vendor/lib/libgpustats.so
--vendor/lib64/libgpustats.so
-lib64/libOmxVpp.so
-lib64/libvpplibrary.so
 lib/libOmxVpp.so
 lib/libvpplibrary.so
-vendor/lib64/libI420colorconvert.so
-vendor/lib64/libmiracast.so
-vendor/lib64/libmm-color-convertor.so
-vendor/lib64/libmmosal.so
-vendor/lib64/libOmxAacDec.so
-vendor/lib64/libOmxEvrcDec.so
-vendor/lib64/libOmxQcelp13Dec.so
-vendor/lib64/libvpphvx.so
+lib64/libOmxVpp.so
+lib64/libvpplibrary.so
 vendor/lib/libI420colorconvert.so
+vendor/lib/libOmxAacDec.so
+vendor/lib/libOmxEvrcDec.so
+vendor/lib/libOmxQcelp13Dec.so
+vendor/lib/libOmxVideoDSMode.so
+-vendor/lib/libgpustats.so
 vendor/lib/libmiracast.so
 vendor/lib/libmm-color-convertor.so
 vendor/lib/libmmosal.so
-vendor/lib/libOmxAacDec.so
-vendor/lib/libOmxEvrcDec.so
-vendor/lib/libOmxVideoDSMode.so
-vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libvpphvx.so
 vendor/lib/libvqzip.so
+vendor/lib64/libI420colorconvert.so
+vendor/lib64/libOmxAacDec.so
+vendor/lib64/libOmxEvrcDec.so
+vendor/lib64/libOmxQcelp13Dec.so
+-vendor/lib64/libgpustats.so
+vendor/lib64/libmiracast.so
+vendor/lib64/libmm-color-convertor.so
+vendor/lib64/libmmosal.so
+vendor/lib64/libvpphvx.so
 
 # Network
 -priv-app/QtiTetherService/QtiTetherService.apk
