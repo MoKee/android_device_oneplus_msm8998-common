@@ -123,10 +123,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libbthost_if
 
-# Camera
-PRODUCT_PACKAGES += \
-    Snap
-
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
     cneapiclient \
