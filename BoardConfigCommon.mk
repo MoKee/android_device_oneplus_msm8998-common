@@ -211,6 +211,8 @@ DEVICE_MANIFEST_FILE := $(PLATFORM_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(PLATFORM_PATH)/compatibility_matrix.xml
 
 # Init
+TARGET_INIT_VENDOR_LIB := libinit_oneplus_msm8998
+TARGET_RECOVERY_DEVICE_MODULES := libinit_oneplus_msm8998
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
 # Keystore
