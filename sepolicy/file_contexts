@@ -15,6 +15,9 @@
 /data/misc/netmgr(/.*)?                                         u:object_r:net_data_file:s0
 /data/oemnvitems(/.*)?                                          u:object_r:nv_data_file:s0
 
+# bluetooth
+/(vendor|system/vendor)/bin/bt-mac-generator                    u:object_r:bt_mac_generator_exec:s0
+
 # sys
 /sys/devices/soc/soc:fpc_fpc1020/irq                            u:object_r:sysfs_fpc_irq:s0
 /sys/devices/soc/soc:fpc_fpc1020/report_home                    u:object_r:sysfs_fpc_home:s0
