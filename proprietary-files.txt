@@ -1,10 +1,30 @@
+# Audio
+etc/firmware/tfa98xx.cnt
+
+# Alipay
+-priv-app/IFAAService/IFAAService.apk
+bin/ifaadaemon
+lib/libteeclientjni.so
+lib64/libteeclientjni.so
+lib64/libteeclientjniv2.so
+
 # DASH
 -sbin/dashd:rootfs
-vendor/bin/hvdcp_opti
 
 # Graphics firmware
+vendor/firmware/a530_gpmu.fw2
 vendor/firmware/a530_pfp.fw
 vendor/firmware/a530_pm4.fw
+vendor/firmware/a530_zap.b00
+vendor/firmware/a530_zap.b01
+vendor/firmware/a530_zap.b02
+vendor/firmware/a530_zap.elf
+vendor/firmware/a530_zap.mdt
+vendor/firmware/a530v1_pfp.fw
+vendor/firmware/a530v1_pm4.fw
+vendor/firmware/a530v2_seq.fw2
+vendor/firmware/a530v3_gpmu.fw2
+vendor/firmware/a530v3_seq.fw2
 vendor/firmware/a540_gpmu.fw2
 vendor/firmware/a540_zap.b00
 vendor/firmware/a540_zap.b01
@@ -13,18 +33,13 @@ vendor/firmware/a540_zap.elf
 vendor/firmware/a540_zap.mdt
 
 # IPA
-vendor/bin/ipacm-diag
-vendor/firmware/ipa_fws.mdt
-vendor/firmware/ipa_fws.b04
-vendor/firmware/ipa_fws.b01
 vendor/firmware/ipa_fws.b00
-vendor/firmware/ipa_fws.b03
+vendor/firmware/ipa_fws.b01
 vendor/firmware/ipa_fws.b02
+vendor/firmware/ipa_fws.b03
+vendor/firmware/ipa_fws.b04
 vendor/firmware/ipa_fws.elf
-
-# LEIA
-vendor/firmware/leia_pm4_470.fw
-vendor/firmware/leia_pfp_470.fw
+vendor/firmware/ipa_fws.mdt
 
 # NFC firmware
 vendor/firmware/libpn553_fw.so
@@ -32,25 +47,12 @@ vendor/firmware/libpn553_fw.so
 # Radio - factory
 lib64/libparam.so
 
-# OpenMobile
-etc/permissions/org.simalliance.openmobileapi.xml
--framework/org.simalliance.openmobileapi.jar
--priv-app/SmartcardService/SmartcardService.apk
+# Radio - MBN
+etc/firmware/mbn_ota/mbn_ota.txt
 
 # Sensors
 vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sensor_def_qcomdev.conf
-lib64/sensors.hal.tof.so
-lib/sensors.hal.tof.so
-vendor/lib64/sensor_calibrate.so
-vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
-vendor/lib/sensor_calibrate.so
-vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
-vendor/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
 
-# Voice fingerprint
-vendor/bin/qvop-daemon
-vendor/etc/qvop/antispoofing.bin
-vendor/etc/qvop/cmudict.bin
-vendor/etc/qvop/noisesample.bin
-vendor/etc/qvop/poc_64_hmm.gmm
+# Touchscreen Firmware
+etc/firmware/tp/fw_synaptics_16859.img
