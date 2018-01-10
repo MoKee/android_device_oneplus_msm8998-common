@@ -73,7 +73,7 @@ vendor/bin/hci_qcomm_init
 vendor/bin/wcnss_filter
 
 # CNE
--priv-app/CNEService/CNEService.apk
+# -priv-app/CNEService/CNEService.apk
 etc/cne/SwimConfig.xml
 etc/cne/andsfCne.xml
 etc/permissions/cneapiclient.xml
@@ -120,7 +120,7 @@ vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
 
 # DPM
--priv-app/dpmserviceapp/dpmserviceapp.apk
+# -priv-app/dpmserviceapp/dpmserviceapp.apk
 bin/dpmd
 etc/dpm/dpm.conf
 etc/dpm/nsrm/NsrmConfiguration.xml
@@ -210,7 +210,7 @@ vendor/lib/hw/gatekeeper.msm8998.so
 vendor/lib64/hw/gatekeeper.msm8998.so
 
 # GPS
--priv-app/com.qualcomm.location/com.qualcomm.location.apk
+# -priv-app/com.qualcomm.location/com.qualcomm.location.apk
 -vendor/lib/libloc_api_v02.so
 -vendor/lib64/libloc_api_v02.so
 etc/permissions/com.qti.location.sdk.xml
