@@ -356,6 +356,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     soter
 
+# Tetheroffload
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml
+
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
@@ -383,9 +388,8 @@ PRODUCT_PACKAGES += \
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
-    ipacm \
-    ipacm-diag \
-    IPACM_cfg.xml \
+    libqsap_sdk \
+    libQWiFiSoftApCfg \
     libwpa_client \
     hostapd \
     wificond \
