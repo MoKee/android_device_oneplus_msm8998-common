@@ -5,7 +5,7 @@
         <version>2.0</version>
         <interface>
             <name>IDevicesFactory</name>
-            <instance>default</instance>
+            <instance>msm8998</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -36,11 +36,11 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.boot</name>
+        <name>android.hardware.broadcastradio</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IBootControl</name>
+            <name>IBroadcastRadioFactory</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -51,6 +51,15 @@
         <interface>
             <name>ICameraProvider</name>
             <instance>legacy/0</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.cas</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMediaCasService</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -68,13 +77,13 @@
         <version>1.0</version>
         <interface>
             <name>ICryptoFactory</name>
-            <instance>default</instance>
             <instance>widevine</instance>
+            <instance>default</instance>
         </interface>
         <interface>
             <name>IDrmFactory</name>
-            <instance>default</instance>
             <instance>widevine</instance>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -83,7 +92,7 @@
         <version>1.0</version>
         <interface>
             <name>IGatekeeper</name>
-            <instance>default</instance>
+            <instance>msm8998</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -92,7 +101,7 @@
         <version>1.0</version>
         <interface>
             <name>IGnss</name>
-            <instance>default</instance>
+            <instance>msm8998</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -101,7 +110,7 @@
         <version>2.0</version>
         <interface>
             <name>IAllocator</name>
-            <instance>default</instance>
+            <instance>msm8998</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -110,7 +119,7 @@
         <version>2.1</version>
         <interface>
             <name>IComposer</name>
-            <instance>default</instance>
+            <instance>msm8998</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -137,7 +146,7 @@
         <version>3.0</version>
         <interface>
             <name>IKeymasterDevice</name>
-            <instance>default</instance>
+            <instance>msm8998</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -146,7 +155,7 @@
         <version>2.0</version>
         <interface>
             <name>ILight</name>
-            <instance>default</instance>
+            <instance>msm8998</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -168,7 +177,7 @@
         <version>1.0</version>
         <interface>
             <name>IMemtrack</name>
-            <instance>default</instance>
+            <instance>msm8998</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -183,7 +192,7 @@
     <hal format="hidl">
         <name>android.hardware.power</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>IPower</name>
             <instance>default</instance>
@@ -229,7 +238,7 @@
         <version>1.0</version>
         <interface>
             <name>ISensors</name>
-            <instance>default</instance>
+            <instance>msm8998</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -256,7 +265,7 @@
         <version>1.0</version>
         <interface>
             <name>IThermal</name>
-            <instance>default</instance>
+            <instance>msm8998</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -301,24 +310,6 @@
         <version>1.0</version>
         <interface>
             <name>ISupplicant</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>com.qualcomm.qti.ant</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IAntHci</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>com.qualcomm.qti.bluetooth_audio</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IBluetoothAudio</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -417,15 +408,6 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.nxp.hardware.nfc</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>INqNfc</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.esepowermanager</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -449,15 +431,6 @@
         <version>1.0</version>
         <interface>
             <name>IAlarm</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.fm</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IFmHci</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -628,33 +601,6 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.wifi.keystore</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IKeystoreExt</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.wigig.netperftuner</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>INetPerfTuner</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.wigig.supptunnel</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISuppTunnelProvider</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.imsrtpservice</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -672,7 +618,4 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <sepolicy>
-        <version>26.0</version>
-    </sepolicy>
 </manifest>
