@@ -54,9 +54,6 @@
     -->
     <integer name="config_longPressOnAppSwitchBehavior">1</integer>
 
-    <!-- Enable blur support -->
-    <bool name="config_uiBlurEnabled">true</bool>
-
     <!-- Whether notify fingerprint client of successful cancelled authentication -->
     <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
 
