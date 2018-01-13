@@ -36,7 +36,7 @@ fi
 setup_vendor "$DEVICE_COMMON" "$VENDOR" "$MK_ROOT" true
 
 # Copyright headers and guards
-write_headers "dumpling"
+write_headers "cheeseburger dumpling"
 
 # The standard blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt
