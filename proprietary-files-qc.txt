@@ -561,8 +561,6 @@ vendor/radio/qcril_database/qcril.db
 # Radio - IMS
 -app/ims/ims.apk
 -app/imssettings/imssettings.apk
-framework/rcs_service_aidl.jar
-framework/rcs_service_api.jar
 lib/com.qualcomm.qti.imscmservice@1.0.so
 lib/lib-imscamera.so
 lib/lib-imsvideocodec.so
