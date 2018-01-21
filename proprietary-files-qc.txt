@@ -131,12 +131,14 @@ framework/com.qti.dpmframework.jar
 framework/dpmapi.jar
 framework/tcmclient.jar
 lib/com.qualcomm.qti.dpm.api@1.0.so
+lib/libdiag_system.so
 lib/libdpmctmgr.so
 lib/libdpmfdmgr.so
 lib/libdpmframework.so
 lib/libdpmnsrm.so
 lib/libdpmtcm.so
 lib64/com.qualcomm.qti.dpm.api@1.0.so
+lib64/libdiag_system.so
 lib64/libdpmctmgr.so
 lib64/libdpmfdmgr.so
 lib64/libdpmframework.so
