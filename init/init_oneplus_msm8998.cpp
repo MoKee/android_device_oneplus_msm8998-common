@@ -38,65 +38,97 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "vendor_init.h"
 #include "property_service.h"
 
-#define FP_DETECT "/sys/devices/soc/soc:fingerprint_detect/sensor_version"
+#define SENSOR_VERSION_FILE "/sys/devices/soc/soc:fingerprint_detect/sensor_version"
+#define BOOT_REASON_FILE "/proc/sys/kernel/boot_reason"
 
-#define SENSOR_FPC_1  0x01
-#define SENSOR_FPC_2  0x02
-#define SENSOR_GOODIX 0x03
-
+using android::base::Trim;
+using android::base::ReadFileToString;
 using android::init::property_set;
 
-static int get_sensor_version()
+void init_alarm_boot_properties()
 {
-    int fd, ret;
-    char buf[80];
-
-    fd = open(FP_DETECT, O_RDONLY);
-    if (fd < 0) {
-        strerror_r(errno, buf, sizeof(buf));
-        PLOG(ERROR) << "Failed to open fp_detect: " << buf;
-        ret = -errno;
-        goto end;
+    std::string boot_reason;
+    if (ReadFileToString(BOOT_REASON_FILE, &boot_reason)) {
+        /*
+         * Setup ro.alarm_boot value to true when it is RTC triggered boot up
+         * For existing PMIC chips, the following mapping applies
+         * for the value of boot_reason:
+         *
+         * 0 -> unknown
+         * 1 -> hard reset
+         * 2 -> sudden momentary power loss (SMPL)
+         * 3 -> real time clock (RTC)
+         * 4 -> DC charger inserted
+         * 5 -> USB charger inserted
+         * 6 -> PON1 pin toggled (for secondary PMICs)
+         * 7 -> CBLPWR_N pin toggled (for external power supply)
+         * 8 -> KPDPWR_N pin toggled (power key pressed)
+         */
+        if (Trim(boot_reason) == "0") {
+            property_set("ro.boot.bootreason", "invalid");
+            property_set("ro.alarm_boot", "false");
+        }
+        else if (Trim(boot_reason) == "1") {
+            property_set("ro.boot.bootreason", "hard_reset");
+            property_set("ro.alarm_boot", "false");
+        }
+        else if (Trim(boot_reason) == "2") {
+            property_set("ro.boot.bootreason", "smpl");
+            property_set("ro.alarm_boot", "false");
+        }
+        else if (Trim(boot_reason) == "3") {
+            property_set("ro.alarm_boot", "true");
+            // disable boot animation for RTC wakeup
+            property_set("debug.sf.nobootanimation", "1");
+        }
+        else if (Trim(boot_reason) == "4") {
+            property_set("ro.boot.bootreason", "dc_chg");
+            property_set("ro.alarm_boot", "false");
+        }
+        else if (Trim(boot_reason) == "5") {
+            property_set("ro.boot.bootreason", "usb_chg");
+            property_set("ro.alarm_boot", "false");
+        }
+        else if (Trim(boot_reason) == "6") {
+            property_set("ro.boot.bootreason", "pon1");
+            property_set("ro.alarm_boot", "false");
+        }
+        else if (Trim(boot_reason) == "7") {
+            property_set("ro.boot.bootreason", "cblpwr");
+            property_set("ro.alarm_boot", "false");
+        }
+        else if (Trim(boot_reason) == "8") {
+            property_set("ro.boot.bootreason", "kpdpwr");
+            property_set("ro.alarm_boot", "false");
+        }
     }
-
-    if (read(fd, buf, 80) < 0) {
-        strerror_r(errno, buf, sizeof(buf));
-        PLOG(ERROR) << "Failed to read fp_detect: " << buf;
-        ret = -errno;
-        goto close;
+    else {
+        LOG(ERROR) << "Unable to read bootreason from " << BOOT_REASON;
     }
-
-    if (sscanf(buf, "%d", &ret) != 1) {
-        PLOG(ERROR) << "Failed to parse fp_detect: " << buf;
-        ret = -EINVAL;
-        goto close;
-    }
-
-close:
-    close(fd);
-end:
-    return ret;
 }
 
-void vendor_load_properties()
+void init_fingerprint_properties()
 {
-    int sensor_version = get_sensor_version();
-    if (sensor_version < 0) {
-        LOG(ERROR) << "Failed to detect sensor version";
-        return;
-    }
-
-    LOG(INFO) << "Loading HAL for sensor version " << sensor_version;
-    switch (sensor_version) {
-        case SENSOR_FPC_1:
-        case SENSOR_FPC_2:
+    std::string sensor_version;
+    if (ReadFileToString(SENSOR_VERSION_FILE, &sensor_version)) {
+        LOG(INFO) << "Loading Fingerprint HAL for sensor version " << sensor_version;
+        if (Trim(sensor_version) == "1" || Trim(sensor_version) == "2") {
             property_set("ro.hardware.fingerprint", "fpc");
-            break;
-        case SENSOR_GOODIX:
+        }
+        else if (Trim(sensor_version) == "3") {
             property_set("ro.hardware.fingerprint", "goodix");
-            break;
-        default:
-            LOG(ERROR) << "Unsupported sensor: " << sensor_version;
-            break;
+        }
+        else {
+            LOG(ERROR) << "Unsupported fingerprint sensor: " << sensor_version;
+        }
     }
+    else {
+        LOG(ERROR) << "Failed to detect sensor version";
+    }
+}
+
+void vendor_load_properties() {
+    LOG(INFO) << "Loading vendor specific properties";
+    init_alarm_boot_properties();
+    init_fingerprint_properties();
 }
