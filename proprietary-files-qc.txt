@@ -78,6 +78,7 @@ etc/cne/SwimConfig.xml
 etc/cne/andsfCne.xml
 etc/permissions/cneapiclient.xml
 etc/permissions/com.quicinc.cne.xml
+etc/permissions/privapp-permissions-qti.xml
 framework/cneapiclient.jar
 framework/com.quicinc.cne.jar
 lib/libvendorconn.so
@@ -218,6 +219,7 @@ vendor/lib64/hw/gatekeeper.msm8998.so
 etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.xml
 etc/permissions/izat.xt.srv.xml
+etc/permissions/privapp-permissions-com.qualcomm.location.xml
 framework/com.qti.location.sdk.jar
 framework/izat.xt.srv.jar
 lib/liblocationservice_jni.so
@@ -564,6 +566,7 @@ vendor/radio/qcril_database/qcril.db
 # Radio - IMS
 -app/ims/ims.apk
 -app/imssettings/imssettings.apk
+etc/permissions/qti-vzw-ims-internal.xml
 lib/com.qualcomm.qti.imscmservice@1.0.so
 lib/lib-imscamera.so
 lib/lib-imsvideocodec.so
