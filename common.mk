@@ -409,6 +409,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-service.mokee
 
+# VNDK-SP:
+PRODUCT_PACKAGES += \
+    vndk-sp
+
 # VR
 PRODUCT_PACKAGES += \
     android.hardware.vr@1.0-impl \
