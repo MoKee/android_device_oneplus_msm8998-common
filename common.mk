@@ -94,11 +94,15 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
 # Device was launched with N
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.product.first_api_level=25
+PRODUCT_SHIPPING_API_LEVEL := 25
 
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
+
+# Treble
+PRODUCT_VENDOR_MOVE_ENABLED := true
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+PRODUCT_COMPATIBILITY_MATRIX_LEVEL_OVERRIDE := 27
 
 # Audio
 PRODUCT_PACKAGES += \
