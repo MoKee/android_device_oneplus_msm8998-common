@@ -99,6 +99,15 @@ PRODUCT_SHIPPING_API_LEVEL := 25
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
 
+# Treble
+PRODUCT_VENDOR_MOVE_ENABLED := true
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+PRODUCT_COMPATIBILITY_MATRIX_LEVEL_OVERRIDE := 27
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/treblize/sgdisk-op5:install/bin/sgdisk-op5 \
+    $(LOCAL_PATH)/treblize/treblize.sh:install/bin/treblize.sh
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \

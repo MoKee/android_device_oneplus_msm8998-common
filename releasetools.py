@@ -19,11 +19,13 @@ import re
 def FullOTA_Assertions(info):
   AddModemAssertion(info)
   AddFileEncryptionAssertion(info)
+  AddTreblize(info)
   return
 
 def IncrementalOTA_Assertions(info):
   AddModemAssertion(info)
   AddFileEncryptionAssertion(info)
+  AddTreblize(info)
   return
 
 def AddModemAssertion(info):
@@ -57,3 +59,13 @@ def AddFileEncryptionAssertion(info):
   info.script.AppendExtra('abort("FBE check failed.");');
   info.script.AppendExtra('endif;');
   info.script.Unmount("/data");
+
+def AddTreblize(info):
+  info.script.AppendExtra('package_extract_file("install/bin/sgdisk-op5", "/tmp/sgdisk-op5");');
+  info.script.AppendExtra('package_extract_file("install/bin/treblize.sh", "/tmp/treblize.sh");');
+  info.script.AppendExtra('set_metadata("/tmp/sgdisk-op5", "uid", 0, "gid", 0, "mode", 0755);');
+  info.script.AppendExtra('set_metadata("/tmp/treblize.sh", "uid", 0, "gid", 0, "mode", 0755);');
+  info.script.AppendExtra('ui_print("Checking Project Treble...");');
+  info.script.AppendExtra('if run_program("/tmp/treblize.sh") != 0 then');
+  info.script.AppendExtra('abort("Treblize failed.");');
+  info.script.AppendExtra('endif;');
