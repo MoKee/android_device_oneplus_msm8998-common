@@ -77,6 +77,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
 
+# Treble
+PRODUCT_VENDOR_MOVE_ENABLED := true
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
