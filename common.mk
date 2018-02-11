@@ -173,6 +173,8 @@ PRODUCT_PACKAGES += \
     libgenlock \
     liboverlay \
     libtinyxml \
+    libqdMetaData \
+    libqdMetaData.system \
     vendor.display.config@1.0 \
     vendor.display.config@1.0_vendor
 
