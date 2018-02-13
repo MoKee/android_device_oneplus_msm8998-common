@@ -418,6 +418,9 @@ vendor/lib/hw/sound_trigger.primary.msm8998.so
 vendor/lib/libsmwrapper.so
 vendor/lib64/hw/sound_trigger.primary.msm8998.so
 
+# Low power Whitelist
+etc/sysconfig/qti_whitelist.xml
+
 # Media
 -vendor/lib/libgpustats.so
 -vendor/lib64/libgpustats.so
