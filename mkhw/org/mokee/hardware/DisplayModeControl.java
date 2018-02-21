@@ -17,6 +17,8 @@
 
 package org.mokee.hardware;
 
+import java.util.HashMap;
+
 import mokee.hardware.DisplayMode;
 
 import org.mokee.internal.util.FileUtils;
@@ -38,6 +40,9 @@ public class DisplayModeControl {
     private static final String PROFILE_PATH
             = "/sys/class/graphics/fb0/color_profile";
 
+    private static final String PROFILE_CAPS_PATH
+            = "/sys/class/graphics/fb0/color_profile_caps";
+
     private static final String LOCAL_PROFILE_ID
             = "/data/vendor/display/mokee_color_profile";
 
@@ -56,20 +61,38 @@ public class DisplayModeControl {
     private static final DisplayMode MODE_ADAPTIVE
             = new DisplayMode(6, "adaptive");
 
-    private static final DisplayMode[] MODES = new DisplayMode[] {
-        MODE_NONE,
-        MODE_SRGB,
-        MODE_DCI_P3,
-        MODE_READING,
-        MODE_ADAPTIVE,
-    };
+    private static final HashMap<Integer, DisplayMode> MODES
+            = new HashMap<>();
+
+    static {
+        MODES.put(MODE_NONE.id, MODE_NONE);
+
+        final String line = FileUtils.readOneLine(PROFILE_CAPS_PATH);
+        if (line != null) {
+            final int caps = Integer.parseInt(line);
+            final DisplayMode[] modes = new DisplayMode[] {
+                MODE_SRGB,
+                MODE_DCI_P3,
+                MODE_READING,
+                MODE_ADAPTIVE,
+            };
+
+            for (final DisplayMode mode : modes) {
+                final int bit = 1 << (mode.id - 1);
+                if ((caps & bit) != 0) {
+                    MODES.put(mode.id, mode);
+                }
+            }
+        }
+    }
 
     /*
      * All HAF classes should export this boolean.
      * Real implementations must, of course, return true
      */
     public static boolean isSupported() {
-        return FileUtils.isFileWritable(PROFILE_PATH);
+        return FileUtils.isFileWritable(PROFILE_PATH) &&
+                FileUtils.isFileReadable(PROFILE_CAPS_PATH);
     }
 
     /*
@@ -80,7 +103,8 @@ public class DisplayModeControl {
      * map the name to a human-readable format or perform translation.
      */
     public static DisplayMode[] getAvailableModes() {
-        return MODES;
+        return MODES.values().toArray(
+                new DisplayMode[MODES.size()]);
     }
 
     /*
@@ -88,19 +112,13 @@ public class DisplayModeControl {
      * null if no mode is selected.
      */
     public static DisplayMode getCurrentMode() {
-        String line = FileUtils.readOneLine(LOCAL_PROFILE_ID);
+        final String line = FileUtils.readOneLine(LOCAL_PROFILE_ID);
         if (line == null) {
             return null;
         }
 
-        int mode = Integer.parseInt(line);
-        for (DisplayMode item : MODES) {
-            if (item.id == mode) {
-                return item;
-            }
-        }
-
-        return null;
+        final int id = Integer.parseInt(line);
+        return MODES.get(id);
     }
 
     /*
@@ -110,9 +128,9 @@ public class DisplayModeControl {
      * if this mode is valid.
      */
     public static boolean setMode(DisplayMode mode, boolean makeDefault) {
-        for (DisplayMode item : MODES) {
+        for (final DisplayMode item : MODES.values()) {
             if (item.name.equals(mode.name)) {
-                String value = String.valueOf(item.id);
+                final String value = String.valueOf(item.id);
                 return FileUtils.writeLine(PROFILE_PATH, value) &&
                     (!makeDefault || FileUtils.writeLine(LOCAL_PROFILE_ID, value));
             }
