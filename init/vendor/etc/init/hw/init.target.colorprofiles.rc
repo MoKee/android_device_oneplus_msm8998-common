@@ -1,0 +1,5 @@
+on boot
+    chown system graphics /sys/class/graphics/fb0/color_profile
+    chown system graphics /sys/class/graphics/fb0/color_profile_caps
+
+    exec /vendor/bin/init.target.colorprofiles.sh
