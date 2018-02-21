@@ -50,10 +50,18 @@ public class DisplayModeControl {
     private static final DisplayMode MODE_DCI_P3
             = new DisplayMode(3, "dcip3");
 
+    private static final DisplayMode MODE_READING
+            = new DisplayMode(5, "reading");
+
+    private static final DisplayMode MODE_ADAPTIVE
+            = new DisplayMode(6, "adaptive");
+
     private static final DisplayMode[] MODES = new DisplayMode[] {
         MODE_NONE,
         MODE_SRGB,
         MODE_DCI_P3,
+        MODE_READING,
+        MODE_ADAPTIVE,
     };
 
     /*
