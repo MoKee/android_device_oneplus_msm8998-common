@@ -530,7 +530,7 @@ etc/permissions/qcrilhook.xml
 etc/permissions/telephonyservice.xml
 framework/QtiTelephonyServicelibrary.jar
 framework/embmslibrary.jar
-framework/qti-telephony-common.jar|2ae4025423b84f3e86801ffd32ba2ceecfc72454
+framework/qti-telephony-common.jar|4ebf6571b783b3e2fa9a0ca5457fd2f3b5c01162
 vendor/bin/netmgrd
 vendor/bin/port-bridge
 vendor/bin/qti
