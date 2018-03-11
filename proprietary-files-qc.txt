@@ -43,7 +43,6 @@ vendor/lib/vendor.qti.hardware.alarm@1.0.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # Audio
--vendor/app/aptxui/aptxui.apk
 lib/libldacBT_abr.so
 lib/libldacBT_enc.so
 lib64/libldacBT_abr.so
@@ -87,7 +86,9 @@ etc/permissions/privapp-permissions-qti.xml
 framework/cneapiclient.jar
 framework/com.quicinc.cne.jar
 lib/libvendorconn.so
+lib/vendor.qti.hardware.data.latency@1.0.so
 lib64/libvendorconn.so
+lib64/vendor.qti.hardware.data.latency@1.0.so
 vendor/bin/cnd
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
@@ -114,6 +115,7 @@ vendor/lib/libcneqmiutils.so
 vendor/lib/libwms.so
 vendor/lib/libwqe.so
 vendor/lib/libxml.so
+vendor/lib/vendor.qti.hardware.data.latency@1.0_vendor.so
 vendor/lib64/com.quicinc.cne.api@1.0.so
 vendor/lib64/com.quicinc.cne.constants@1.0.so
 vendor/lib64/com.quicinc.cne.constants@2.0.so
@@ -124,6 +126,7 @@ vendor/lib64/libcneqmiutils.so
 vendor/lib64/libwms.so
 vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
+vendor/lib64/vendor.qti.hardware.data.latency@1.0_vendor.so
 
 # DPM
 -priv-app/dpmserviceapp/dpmserviceapp.apk
@@ -481,6 +484,13 @@ vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
+# PLAYready
+vendor/lib/qcdrm/playready/lib/drm/libdrmprplugin_customer.so
+vendor/lib/qcdrm/playready/lib/libprdrmdecrypt_customer.so
+vendor/lib/qcdrm/playready/lib/libtzplayready_customer.so
+vendor/lib/qcdrm/playready/lib/mediadrm/libprmediadrmdecrypt_customer.so
+vendor/lib/qcdrm/playready/lib/mediadrm/libprmediadrmplugin_customer.so
+
 # Postprocessing
 -vendor/app/colorservice/colorservice.apk
 etc/permissions/com.qti.snapdragon.sdk.display.xml
@@ -539,7 +549,6 @@ vendor/lib64/libsmemlog.so
 -app/QtiTelephonyService/QtiTelephonyService.apk
 -app/datastatusnotification/datastatusnotification.apk
 -app/embms/embms.apk
--app/radioconfig/radioconfig.apk
 -framework/qcnvitems.jar
 -framework/qcrilhook.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
@@ -732,15 +741,82 @@ vendor/bin/cnss-daemon
 vendor/bin/cnss_diag
 
 # Wi-Fi Display
+-app/WfdService/WfdService.apk
+-framework/WfdCommon.jar
+bin/wfdservice
+etc/init/wfdservice.rc
+etc/wfdconfig.xml
+etc/wfdconfigsink.xml
 lib/com.qualcomm.qti.wifidisplayhal@1.0.so
+lib/libExtendedExtractor.so
+lib/libFileMux.so
+lib/libmmparser.so
+lib/libmmparser_lite.so
+lib/libwfdavenhancements.so
+lib/libwfdcodecv4l2.so
+lib/libwfdcommonutils.so
+lib/libwfdconfigutils.so
+lib/libwfdmminterface.so
+lib/libwfdmmsink.so
+lib/libwfdmmsrc.so
+lib/libwfdnative.so
+lib/libwfdrtsp.so
+lib/libwfdservice.so
+lib/libwfdsm.so
+lib/libwfduibcinterface.so
+lib/libwfduibcsink.so
+lib/libwfduibcsinkinterface.so
+lib/libwfduibcsrc.so
+lib/libwfduibcsrcinterface.so
 lib64/com.qualcomm.qti.wifidisplayhal@1.0.so
+lib64/libExtendedExtractor.so
+lib64/libFileMux.so
+lib64/libmmparser.so
+lib64/libmmparser_lite.so
+lib64/libwfdavenhancements.so
+lib64/libwfdcodecv4l2.so
+lib64/libwfdcommonutils.so
+lib64/libwfdconfigutils.so
+lib64/libwfdmminterface.so
+lib64/libwfdmmsink.so
+lib64/libwfdmmsrc.so
+lib64/libwfdnative.so
+lib64/libwfdrtsp.so
+lib64/libwfdservice.so
+lib64/libwfdsm.so
+lib64/libwfduibcinterface.so
+lib64/libwfduibcsink.so
+lib64/libwfduibcsinkinterface.so
+lib64/libwfduibcsrc.so
+lib64/libwfduibcsrcinterface.so
+vendor/bin/hdcp1prov
+vendor/bin/hdcp2p2prov
+vendor/bin/wifidisplayhalservice
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-impl.so
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0_vendor.so
+vendor/lib/libhdcp1prov.so
+vendor/lib/libhdcp2p2prov.so
+vendor/lib/libwfdcommonutils_proprietary.so
+vendor/lib/libwfdhaldsmanager.so
+vendor/lib/libwfdhdcpcp.so
+vendor/lib/libwfdhdcpcp.so
+vendor/lib/libwfdmmservice.so
+vendor/lib/libwfdmodulehdcpsession.so
+vendor/lib/libwfdmodulehdcpsession.so
 vendor/lib64/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so
 vendor/lib64/com.qualcomm.qti.wifidisplayhal@1.0-impl.so
 vendor/lib64/com.qualcomm.qti.wifidisplayhal@1.0_vendor.so
+vendor/lib64/libhdcp1prov.so
+vendor/lib64/libhdcp2p2prov.so
+vendor/lib64/libwfdcommonutils_proprietary.so
+vendor/lib64/libwfdhaldsmanager.so
+vendor/lib64/libwfdhdcpcp.so
+vendor/lib64/libwfdhdcpcp.so
+vendor/lib64/libwfdmmservice.so
+vendor/lib64/libwfdmodulehdcpsession.so
+vendor/lib64/libwfdmodulehdcpsession.so
 
 # VR
 lib/libvr_amb_engine.so
