@@ -10,7 +10,7 @@ lib64/libteeclientjniv2.so
 
 # Camera
 bin/mm-qcamera-daemon
-lib/libVDBlurlessAPI.so
+lib/libVDBlurlessAPI_v2.so
 lib/libVDHDRAPI.so
 lib/libfiltergenerator.so
 lib/libmm-qcamera.so
@@ -377,7 +377,7 @@ lib/libopcamera_crypt.so
 lib/libopcamera_native_modules.so
 
 # Camera / DSP - Hexagon libraries
-lib/rfsa/adsp/libVDHexagonBlurless_skel.so
+lib/rfsa/adsp/libVDHexagonBlurless_v2_skel.so
 lib/rfsa/adsp/libdepthmap_skel.so
 lib/rfsa/adsp/libmorpho_image_stabilizer4_hvx_skel.so
 lib/rfsa/adsp/libmorpho_video_denoiser_hvx_skel.so

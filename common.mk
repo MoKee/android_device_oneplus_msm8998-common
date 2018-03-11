@@ -94,8 +94,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
 # Device was launched with N
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.product.first_api_level=25
+PRODUCT_SHIPPING_API_LEVEL := 25
 
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
@@ -162,7 +161,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service.oneplus5 \
+    android.hardware.camera.provider@2.4-service \
     camera.device@3.2-impl \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0_vendor
