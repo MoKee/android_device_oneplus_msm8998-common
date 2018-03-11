@@ -10,7 +10,7 @@ lib64/libteeclientjniv2.so
 
 # Camera
 bin/mm-qcamera-daemon
-lib/libVDBlurlessAPI.so
+lib/libVDBlurlessAPI_v2.so
 lib/libVDHDRAPI.so
 lib/libfiltergenerator.so
 lib/libmm-qcamera.so
@@ -259,6 +259,7 @@ vendor/lib/libchromatix_imx350_isp_4608x3456_27fps_snapshot.so
 vendor/lib/libchromatix_imx350_isp_5184x3880_30fps_snapshot.so
 vendor/lib/libchromatix_imx350_postproc.so
 vendor/lib/libchromatix_imx371_3a_2304x1728_30fps_auto_hdr.so
+vendor/lib/libchromatix_imx371_3a_2304x1728_30fps_face_register.so
 vendor/lib/libchromatix_imx371_3a_2304x1728_30fps_hdr.so
 vendor/lib/libchromatix_imx371_3a_2304x1728_30fps_preview.so
 vendor/lib/libchromatix_imx371_3a_2304x1728_30fps_video.so
@@ -377,7 +378,7 @@ lib/libopcamera_crypt.so
 lib/libopcamera_native_modules.so
 
 # Camera / DSP - Hexagon libraries
-lib/rfsa/adsp/libVDHexagonBlurless_skel.so
+lib/rfsa/adsp/libVDHexagonBlurless_v2_skel.so
 lib/rfsa/adsp/libdepthmap_skel.so
 lib/rfsa/adsp/libmorpho_image_stabilizer4_hvx_skel.so
 lib/rfsa/adsp/libmorpho_video_denoiser_hvx_skel.so
