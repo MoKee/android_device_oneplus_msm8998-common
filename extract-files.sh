@@ -65,4 +65,13 @@ if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
     extract "$MY_DIR"/../$DEVICE/proprietary-files.txt "$SRC" "$SECTION"
 fi
 
+function fix_camera_etc_path () {
+    sed -i \
+        's/\/system\/etc\//\/vendor\/etc\//g' \
+        "$MK_ROOT"/vendor/"$VENDOR"/"$DEVICE_COMMON"/proprietary/"$1"
+}
+
+fix_camera_etc_path vendor/lib/libmmcamera_imglib.so
+fix_camera_etc_path vendor/lib/libmmcamera_interface.so
+
 "$MY_DIR"/setup-makefiles.sh
