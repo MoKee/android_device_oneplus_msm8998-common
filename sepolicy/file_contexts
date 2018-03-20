@@ -1,7 +1,5 @@
 # executables
 /sbin/dashd                                                     u:object_r:dashd_exec:s0
-/system/bin/ifaadaemon                                          u:object_r:ifaadaemon_exec:s0
-
 # We have a couple of non-standard NV partitions
 /dev/block/platform/soc/1da4000.ufshc/by-name/oem_dycnvbk       u:object_r:modem_efs_partition_device:s0
 /dev/block/platform/soc/1da4000.ufshc/by-name/oem_stanvbk       u:object_r:modem_efs_partition_device:s0
