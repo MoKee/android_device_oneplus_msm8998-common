@@ -559,7 +559,7 @@ framework/QtiTelephonyServicelibrary.jar:vendor/framework/QtiTelephonyServicelib
 framework/embmslibrary.jar:vendor/framework/embmslibrary.jar
 framework/qcnvitems.jar:vendor/framework/qcnvitems.jar
 framework/qcrilhook.jar:vendor/framework/qcrilhook.jar
-framework/qti-telephony-common.jar:vendor/framework/qti-telephony-common.jar|4ebf6571b783b3e2fa9a0ca5457fd2f3b5c01162
+framework/qti-telephony-common.jar:vendor/framework/qti-telephony-common.jar|2d68423bd2c4dd528d83f12c384e6d4e107de44e
 vendor/bin/netmgrd
 vendor/bin/port-bridge
 vendor/bin/qti
