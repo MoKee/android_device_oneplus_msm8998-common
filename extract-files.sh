@@ -89,6 +89,9 @@ fix_vendor etc lib64/libdpmframework.so
 fix_vendor framework etc/permissions/com.qti.dpmframework.xml
 fix_vendor framework etc/permissions/dpmapi.xml
 
+# Fingerprint sensor
+fix_vendor framework etc/permissions/com.fingerprints.extension.xml
+
 # GPS
 fix_vendor framework etc/permissions/com.qti.location.sdk.xml
 fix_vendor framework etc/permissions/izat.xt.srv.xml
@@ -101,6 +104,9 @@ fix_vendor framework etc/permissions/embms.xml
 fix_vendor framework etc/permissions/qcnvitems.xml
 fix_vendor framework etc/permissions/qcrilhook.xml
 fix_vendor framework etc/permissions/telephonyservice.xml
+
+# OpenMobile
+fix_vendor framework etc/permissions/org.simalliance.openmobileapi.xml
 
 # Wi-Fi Display
 fix_vendor etc lib/libwfdrtsp.so
