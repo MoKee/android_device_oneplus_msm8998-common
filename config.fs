@@ -31,19 +31,19 @@ user: AID_SYSTEM
 group: AID_SYSTEM
 caps: 0
 
-[system/bin/cnss-daemon]
+[vendor/bin/cnss-daemon]
 mode: 0755
 user: AID_SYSTEM
 group: AID_SYSTEM
 caps: NET_BIND_SERVICE
 
-[system/bin/mm-qcamera-daemon]
+[vendor/bin/mm-qcamera-daemon]
 mode: 0700
 user: AID_CAMERA
 group: AID_SHELL
 caps: SYS_NICE
 
-[system/vendor/bin/qvrservice]
+[vendor/bin/qvrservice]
 mode: 0755
 user: AID_SYSTEM
 group: AID_SYSTEM

@@ -303,7 +303,7 @@ service dashd /sbin/dashd
     group root system
 
 # IFAA
-service ifaadaemon /system/bin/ifaadaemon
+service ifaadaemon /vendor/bin/ifaadaemon
     class late_start
     user system
     group system
@@ -316,7 +316,7 @@ service wifi-mac-generator /vendor/bin/wifi-mac-generator
     disabled
     seclabel u:r:wifi_mac_generator:s0
 
-service bt-mac-generator /system/vendor/bin/bt-mac-generator
+service bt-mac-generator /vendor/bin/bt-mac-generator
     class main
     user bluetooth
     group bluetooth
