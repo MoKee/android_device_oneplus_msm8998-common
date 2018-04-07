@@ -451,6 +451,11 @@ vendor/firmware/ipa_fws.mdt
 # NFC firmware
 vendor/firmware/libpn553_fw.so
 
+# OpenMobile
+-priv-app/SmartcardService/SmartcardService.apk:vendor/priv-app/SmartcardService/SmartcardService.apk
+etc/permissions/org.simalliance.openmobileapi.xml:vendor/etc/permissions/org.simalliance.openmobileapi.xml
+framework/org.simalliance.openmobileapi.jar:vendor/framework/org.simalliance.openmobileapi.jar
+
 # Radio - factory
 lib64/libparam.so:vendor/lib64/libparam.so
 
