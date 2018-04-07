@@ -70,7 +70,7 @@ if [ ! -f /firmware/verinfo/ver_info.txt -o "$prev_version_info" != "$cur_versio
     cp -r /firmware/image/modem_pr/mcfg/configs/* /data/vendor/radio/modem_config
 #ifdef VENDOR_EDIT
 # add for mbn_ota.txt
-    cp -r /system/etc/firmware/mbn_ota/mbn_ota.txt /data/vendor/radio/modem_config/mbn_ota.txt
+    cp -r /vendor/firmware/mbn_ota/mbn_ota.txt /data/vendor/radio/modem_config/mbn_ota.txt
 #endif /*VENDOR_EDIT*/
     chown -hR radio.radio /data/vendor/radio/modem_config
     cp /firmware/verinfo/ver_info.txt /data/vendor/radio/ver_info.txt
