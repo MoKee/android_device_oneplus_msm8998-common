@@ -34,7 +34,7 @@
 /sys/module/fpc1020_tee/parameters/ignor_home_for_ESD           u:object_r:sysfs_fpc_key:s0
 
 # graphics
-/sys/devices/soc/8c0000.qcom,msm-cam/video4linux/(/.*)?         u:object_r:graphics_device:s0
+/sys/devices/soc/8c0000.qcom,msm-cam/video4linux/(/.*)?         u:object_r:sysfs_graphics:s0
 
 # leds
 /sys/class/leds(/.*)?                                           u:object_r:sysfs_leds:s0
