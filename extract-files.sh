@@ -76,37 +76,14 @@ fix_vendor etc lib/libmmcamera_imglib.so
 fix_vendor etc lib/libmmcamera_interface.so
 fix_vendor etc lib/libopcamera_native_modules.so
 
-# CNE
-fix_vendor etc lib/libwqe.so
-fix_vendor etc lib64/libwqe.so
-fix_vendor framework etc/permissions/cneapiclient.xml
-fix_vendor framework etc/permissions/com.quicinc.cne.xml
-
-# DPM
-fix_vendor bin etc/init/dpmd.rc
-fix_vendor etc lib/libdpmframework.so
-fix_vendor etc lib64/libdpmframework.so
-fix_vendor framework etc/permissions/com.qti.dpmframework.xml
-fix_vendor framework etc/permissions/dpmapi.xml
-
 # Fingerprint sensor
 fix_vendor framework etc/permissions/com.fingerprints.extension.xml
-
-# GPS
-fix_vendor framework etc/permissions/com.qti.location.sdk.xml
-fix_vendor framework etc/permissions/izat.xt.srv.xml
-
-# Postprocessing
-fix_vendor framework etc/permissions/com.qti.snapdragon.sdk.display.xml
 
 # Radio
 fix_vendor framework etc/permissions/embms.xml
 fix_vendor framework etc/permissions/qcnvitems.xml
 fix_vendor framework etc/permissions/qcrilhook.xml
 fix_vendor framework etc/permissions/telephonyservice.xml
-
-# OpenMobile
-fix_vendor framework etc/permissions/org.simalliance.openmobileapi.xml
 
 # Wi-Fi Display
 fix_vendor etc lib/libwfdrtsp.so
