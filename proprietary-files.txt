@@ -452,7 +452,7 @@ vendor/firmware/ipa_fws.mdt
 vendor/firmware/libpn553_fw.so
 
 # OpenMobile
--priv-app/SmartcardService/SmartcardService.apk
+-priv-app/SmartcardService/SmartcardService.apk|547ee431cc0b6c21de4a751e0da80dae84b7c573
 etc/permissions/org.simalliance.openmobileapi.xml
 framework/org.simalliance.openmobileapi.jar
 
