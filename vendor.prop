@@ -115,6 +115,7 @@ persist.media.treble_omx=true
 
 # NFC
 ro.nfc.port=I2C
+ro.hardware.nfc_nci=nqx.default
 persist.nfc.smartcard.config=SIM1,eSE1
 
 # Perf
