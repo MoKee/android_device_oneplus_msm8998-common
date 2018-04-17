@@ -404,6 +404,8 @@ lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0.so
 vendor/bin/hbtp_daemon
 vendor/etc/hbtp/hbtpcfg.dat
 vendor/etc/hbtp/hbtpcfg2.dat
+vendor/etc/hbtp/qtc800h.bin
+vendor/etc/hbtp/qtc800s_dsp.bin
 vendor/lib/libhbtpclient.so
 vendor/lib/libhbtpdsp.so
 vendor/lib/libhbtpfrmwk.so
