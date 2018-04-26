@@ -383,6 +383,8 @@ vendor/lib64/libhdr_tm.so|9a61ddbece993d3329d337265f7be5278c237833
 -vendor/lib64/libsdm-disp-vndapis.so|4e936b7cbc00bb05381d03b70c8c53e377676bb3
 vendor/bin/hw/vendor.display.color@1.0-service|fec0d808fa0b795bf3afe8cad8afa06dcc3bf6e1
 vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti|dc6ff7d6bdb4bd7ee248eb03e4b1e53bd04f8221
+vendor/etc/init/vendor.display.color@1.0-service.rc
+vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc
 vendor/lib/libqseed3.so|952f805ba6166e2c24fc8c21b9500ba7cbae1296
 vendor/lib/libsdm-color.so|2a265d34873f3d02bed7641640e84ea75edb977a
 vendor/lib/libsdm-diag.so|ac8b0130258ab08354cedfca89f73fb063e67290
