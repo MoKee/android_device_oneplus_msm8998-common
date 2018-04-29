@@ -15,6 +15,7 @@ vendor/lib64/libfastcvopt.so
 # ADSP modules
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
+vendor/lib/rfsa/adsp/dirac_resource.dar
 vendor/lib/rfsa/adsp/libCpDspFunctions_skel.so
 vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so
 vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so
@@ -23,8 +24,7 @@ vendor/lib/rfsa/adsp/libadsp_fd_skel.so
 vendor/lib/rfsa/adsp/libadsp_hvx_add_constant.so
 vendor/lib/rfsa/adsp/libadsp_hvx_skel.so
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
-vendor/lib/rfsa/adsp/libdirac17801-capiv2.so
-vendor/lib/rfsa/adsp/libdirac_capiv2.so
+vendor/lib/rfsa/adsp/libdirac-capiv2.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libexternal_dog_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
@@ -565,7 +565,7 @@ framework/QtiTelephonyServicelibrary.jar:vendor/framework/QtiTelephonyServicelib
 framework/embmslibrary.jar:vendor/framework/embmslibrary.jar
 framework/qcnvitems.jar:vendor/framework/qcnvitems.jar
 framework/qcrilhook.jar:vendor/framework/qcrilhook.jar
-framework/qti-telephony-common.jar:vendor/framework/qti-telephony-common.jar|2d68423bd2c4dd528d83f12c384e6d4e107de44e
+framework/qti-telephony-common.jar:vendor/framework/qti-telephony-common.jar|00f3c75d05c79ea097b41f605c54941e0e4da70e
 vendor/bin/netmgrd
 vendor/bin/port-bridge
 vendor/bin/qti
