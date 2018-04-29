@@ -554,7 +554,7 @@ vendor/lib64/libsmemlog.so
 -app/QtiTelephonyService/QtiTelephonyService.apk:vendor/app/QtiTelephonyService/QtiTelephonyService.apk
 -app/datastatusnotification/datastatusnotification.apk:vendor/app/datastatusnotification/datastatusnotification.apk
 -app/embms/embms.apk:vendor/app/embms/embms.apk
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk:vendor/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 etc/permissions/embms.xml:vendor/etc/permissions/embms.xml
 etc/permissions/qcnvitems.xml:vendor/etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml:vendor/etc/permissions/qcrilhook.xml
