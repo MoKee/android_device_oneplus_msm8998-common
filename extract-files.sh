@@ -79,23 +79,4 @@ fix_vendor etc lib/libopcamera_native_modules.so
 # Fingerprint sensor
 fix_vendor framework etc/permissions/com.fingerprints.extension.xml
 
-# Radio
-fix_vendor framework etc/permissions/embms.xml
-fix_vendor framework etc/permissions/qcnvitems.xml
-fix_vendor framework etc/permissions/qcrilhook.xml
-fix_vendor framework etc/permissions/telephonyservice.xml
-
-# Wi-Fi Display
-fix_vendor etc lib/libwfdrtsp.so
-fix_vendor etc lib/libwfdservice.so
-fix_vendor etc lib/libwfdsm.so
-fix_vendor etc lib/libwfduibcsinkinterface.so
-fix_vendor etc lib/libwfduibcsrcinterface.so
-fix_vendor etc lib64/libwfdrtsp.so
-fix_vendor etc lib64/libwfdservice.so
-fix_vendor etc lib64/libwfdsm.so
-fix_vendor etc lib64/libwfduibcsinkinterface.so
-fix_vendor etc lib64/libwfduibcsrcinterface.so
-fix_vendor framework etc/init/wfdservice.rc
-
 "$MY_DIR"/setup-makefiles.sh
