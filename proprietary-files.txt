@@ -336,6 +336,7 @@ lib/libmorpho_image_stab4.so:vendor/lib/libmorpho_image_stab4.so
 lib/libmorpho_video_refiner.so:vendor/lib/libmorpho_video_refiner.so
 lib/libopcamera_crypt.so:vendor/lib/libopcamera_crypt.so
 lib/libopcamera_native_modules.so:vendor/lib/libopcamera_native_modules.so
+lib/libstblur_capture_api.so:vendor/lib/libstblur_capture_api.so
 
 # Camera / DSP - Hexagon libraries
 lib/rfsa/adsp/libVDHexagonBlurless_v2_skel.so:vendor/lib/rfsa/adsp/libVDHexagonBlurless_v2_skel.so
@@ -445,10 +446,10 @@ etc/permissions/org.simalliance.openmobileapi.xml
 framework/org.simalliance.openmobileapi.jar
 
 # Radio - factory
-lib64/libparam.so:vendor/lib64/libparam.so
+lib64/libparam.so
 
 # Radio - MBN
-etc/firmware/mbn_ota/mbn_ota.txt:vendor/firmware/mbn_ota/mbn_ota.txt
+etc/firmware/mbn_ota/mbn_ota.txt
 
 # Sensors
 vendor/etc/sensors/hals.conf
