@@ -246,7 +246,6 @@ on property:sys.boot_completed=1
 service dashd /sbin/dashd
     class core
     #critical
-    seclabel u:r:dashd:s0
     group root system
 
 # IFAA
@@ -261,7 +260,6 @@ service wifi-mac-generator /vendor/bin/wifi-mac-generator
     group wifi
     oneshot
     disabled
-    seclabel u:r:wifi_mac_generator:s0
 
 service bt-mac-generator /vendor/bin/bt-mac-generator
     class main
@@ -269,7 +267,6 @@ service bt-mac-generator /vendor/bin/bt-mac-generator
     group bluetooth
     oneshot
     disabled
-    seclabel u:r:bt_mac_generator:s0
 
 service per_mgr /vendor/bin/pm-service
     class core
@@ -410,7 +407,6 @@ service ftmdaemon /vendor/bin/ftmdaemon -n
     group wifi root system
     disabled
     oneshot
-    seclabel u:r:ftmdaemon:s0
 
 on property:ro.build.type=eng
     write /proc/sys/kernel/printk "7 6 1 7"
