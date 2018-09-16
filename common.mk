@@ -23,6 +23,7 @@
 #
 
 $(call inherit-product, vendor/oneplus/msm8998-common/msm8998-common-vendor.mk)
+$(call inherit-product, $(LOCAL_PATH)/vendor-prop.mk)
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
