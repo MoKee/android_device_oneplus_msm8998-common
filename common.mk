@@ -238,7 +238,9 @@ PRODUCT_PACKAGES += \
     libgnsspps \
     libgps.utils \
     liblocation_api \
+    libloc_api_v02 \
     libloc_core \
+    libloc_ds_api \
     libloc_pla \
     libvehiclenetwork-native
 
