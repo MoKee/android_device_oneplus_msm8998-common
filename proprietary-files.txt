@@ -437,6 +437,9 @@ vendor/firmware/ipa_fws.b04
 vendor/firmware/ipa_fws.elf
 vendor/firmware/ipa_fws.mdt
 
+# NFC
+-priv-app/OPWallet/OPWallet.apk|2dd67b11cb1650685ced80e220bdf01905e18633
+
 # NFC firmware
 vendor/firmware/libpn553_fw.so
 
