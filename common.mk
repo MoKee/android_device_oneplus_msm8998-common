@@ -343,6 +343,9 @@ PRODUCT_PACKAGES += \
     nqnfcse_access.xml \
     Tag
 
+PRODUCT_BOOT_JARS += \
+    com.nxp.nfc
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-brcm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/nfc/libnfc-brcm_beijingbus.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-brcm_beijingbus.conf \
