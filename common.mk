@@ -334,7 +334,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     com.gsma.services.nfc \
-    com.nxp.nfc.nq \
     libnqnfc-nci \
     nfc_nci.nqx.default \
     libnqp61-jcop-kit \
@@ -342,6 +341,9 @@ PRODUCT_PACKAGES += \
     nqnfcee_access.xml \
     nqnfcse_access.xml \
     Tag
+
+PRODUCT_BOOT_JARS += \
+    com.nxp.nfc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-brcm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-brcm.conf \
