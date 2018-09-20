@@ -345,7 +345,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-brcm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-brcm.conf \
-    $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
+    $(LOCAL_PATH)/nfc/libnfc-brcm_beijingbus.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-brcm_beijingbus.conf \
+    $(LOCAL_PATH)/nfc/libnfc-brcm_shenzhentong.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-brcm_shenzhentong.conf \
+    $(LOCAL_PATH)/nfc/libnfc-brcm_yangchengtong.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-brcm_yangchengtong.conf \
+    $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
+    $(LOCAL_PATH)/nfc/libnfc-nxp_beijingbus.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp_beijingbus.conf \
+    $(LOCAL_PATH)/nfc/libnfc-nxp_shenzhentong.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp_shenzhentong.conf \
+    $(LOCAL_PATH)/nfc/libnfc-nxp_yangchengtong.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp_yangchengtong.conf
 
 # OMX
 PRODUCT_PACKAGES += \
