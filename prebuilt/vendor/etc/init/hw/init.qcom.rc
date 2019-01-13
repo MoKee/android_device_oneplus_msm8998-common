@@ -34,7 +34,7 @@ import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.qcom.factory.rc
 #import /vendor/etc/init/hw/init.qcom.test.rc
 
-import /vendor/etc/init/hw/init.lineage.rc
+import /vendor/etc/init/hw/init.mokee.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug

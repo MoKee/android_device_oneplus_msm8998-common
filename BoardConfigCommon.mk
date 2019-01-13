@@ -76,7 +76,7 @@ TARGET_COMPILE_WITH_MSM_KERNEL := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8998
-TARGET_KERNEL_CONFIG := lineage_oneplus5_defconfig
+TARGET_KERNEL_CONFIG := mokee_oneplus5_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # QCOM hardware
@@ -169,7 +169,7 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
-WITH_LINEAGE_CHARGER := false
+WITH_MOKEE_CHARGER := false
 
 # CNE and DPM
 BOARD_USES_QCNE := true
@@ -242,8 +242,8 @@ TARGET_PROVIDES_KEYMASTER := true
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
-# Lineage Hardware
-JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(PLATFORM_PATH)/lineagehw|**/*.java
+# MK Hardware
+JAVA_SOURCE_OVERLAYS := org.mokee.hardware|$(PLATFORM_PATH)/mkhw|**/*.java
 
 # NFC
 BOARD_NFC_CHIPSET := pn553

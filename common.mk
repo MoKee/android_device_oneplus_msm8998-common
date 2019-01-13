@@ -278,11 +278,11 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay native
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@1.0-service-sdm \
-    vendor.lineage.livedisplay-V1.0-java
+    vendor.mokee.livedisplay@1.0-service-sdm \
+    vendor.mokee.livedisplay-V1.0-java
 
 PRODUCT_BOOT_JARS += \
-    vendor.lineage.livedisplay-V1.0-java
+    vendor.mokee.livedisplay-V1.0-java
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -435,7 +435,7 @@ PRODUCT_PACKAGES += \
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.build.vendor_security_patch=2018-12-01
+    ro.mk.build.vendor_security_patch=2018-12-01
 
 # Vibrator
 PRODUCT_PACKAGES += \
