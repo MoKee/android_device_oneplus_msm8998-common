@@ -30,7 +30,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.min.duration.secs=30 \
     persist.dirac.acs.controller=qem \
     ro.dirac.acs.storeSettings=1 \
-    ro.dirac.ignore_error=1
+    ro.dirac.ignore_error=1 \
+    tunnel.audio.encode=true
 
 # Audio new
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -91,6 +92,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.cne.feature=1
 
+# Connor
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.connor.disable=0
+
 # Core control
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.core_ctl_min_cpu=2 \
@@ -131,6 +136,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.enable_default_color_mode=0 \
     vendor.display.perf_hint_window=50
 
+# IOP
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.iop.enable_uxe=0 \
+    vendor.iop.enable_prefetch_ofr=0
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.enable-player=true \
@@ -170,7 +180,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # QTI
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.at_library=libqti-at.so \
-    ro.vendor.gt_library=libqti-gt.so
+    ro.vendor.gt_library=libqti-gt.so \
+    ro.vendor.qti.sys.fw.bg_apps_limit=60 \
+    ro.vendor.qti.sys.fw.bservice_enable=true \
+    ro.vendor.qti.sys.fw.bservice_limit=5 \
+    ro.vendor.qti.sys.fw.bservice_age=5000
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -194,6 +208,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.oem_smooth=1 \
     persist.radio.VT_CAM_INTERFACE=1 \
     persist.radio.apm_sim_not_pwdn=1 \
+    persist.radio.efssync=true \
     persist.radio.multisim.config=dsds \
     persist.radio.enhance_ecall=true \
     persist.radio.hw_mbn_update=0 \
@@ -204,7 +219,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.data_ltd_sys_ind=1 \
     persist.vendor.radio.ignore_dom_time=10 \
     persist.vendor.radio.rat_on=combine \
-    persist.vendor.radio.sib16_support=1
+    persist.vendor.radio.sib16_support=1 \
+    persist.vendor.radio.bar_fake_gcell=1 \
+    persist.vendor.radio.arfcn_test_mode=3
 
 # RmNet Data
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -217,7 +234,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.df.mux_count=8 \
     persist.data.df.iwlan_mux=9 \
     persist.data.df.dev_name=rmnet_usb0 \
-    persist.data.iwlan.enable=true
+    persist.vendor.data.iwlan.enable=true
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
