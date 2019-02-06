@@ -241,9 +241,6 @@ TARGET_PROVIDES_KEYMASTER := true
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
-# MK Hardware
-JAVA_SOURCE_OVERLAYS := org.mokee.hardware|$(PLATFORM_PATH)/mkhw|**/*.java
-
 # NFC
 BOARD_NFC_CHIPSET := pn553
 TARGET_USES_NQ_NFC := true
