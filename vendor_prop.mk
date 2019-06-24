@@ -62,6 +62,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.fm.a2dp.conc.disabled=true \
     vendor.audio.noisy.broadcast.delay=600 \
     ro.config.media_vol_steps=25 \
+    ro.config.vc_call_vol_steps=11 \
     ro.af.client_heap_size_kbyte=7168
 
 # Battery
@@ -84,6 +85,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.camera,com.android.camera,org.mokee.snap \
+    vendor.camera.hal1.packagelist=com.whatsapp \
     persist.camera.mobicat=2 \
     persist.camera.stats.debugexif=3080192 \
     persist.ts.rtmakeup=false \
