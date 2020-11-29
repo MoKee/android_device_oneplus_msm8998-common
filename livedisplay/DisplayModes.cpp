@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "LineageHW-DisplayModesService"
+#define LOG_TAG "MKHW-DisplayModesService"
 
 #include <android-base/properties.h>
 #include <android-base/logging.h>
@@ -23,7 +23,7 @@
 #include "DisplayModes.h"
 
 namespace vendor {
-namespace lineage {
+namespace mokee {
 namespace livedisplay {
 namespace V2_0 {
 namespace implementation {
@@ -70,7 +70,7 @@ bool DisplayModes::isSupported() {
     return true;
 }
 
-// Methods from ::vendor::lineage::livedisplay::V2_0::IDisplayModes follow.
+// Methods from ::vendor::mokee::livedisplay::V2_0::IDisplayModes follow.
 Return<void> DisplayModes::getDisplayModes(getDisplayModes_cb resultCb) {
     std::vector<DisplayMode> modes;
 
@@ -170,5 +170,5 @@ Return<bool> DisplayModes::setDisplayMode(int32_t modeID, bool makeDefault) {
 }  // namespace implementation
 }  // namespace V2_0
 }  // namespace livedisplay
-}  // namespace lineage
+}  // namespace mokee
 }  // namespace vendor

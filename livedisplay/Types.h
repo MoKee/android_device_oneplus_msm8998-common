@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-#ifndef VENDOR_LINEAGE_LIVEDISPLAY_V2_0_SDM_TYPES_H
-#define VENDOR_LINEAGE_LIVEDISPLAY_V2_0_SDM_TYPES_H
+#ifndef VENDOR_MOKEE_LIVEDISPLAY_V2_0_SDM_TYPES_H
+#define VENDOR_MOKEE_LIVEDISPLAY_V2_0_SDM_TYPES_H
 
 namespace vendor {
-namespace lineage {
+namespace mokee {
 namespace livedisplay {
 namespace V2_0 {
 namespace implementation {
@@ -72,7 +72,7 @@ struct hsic_ranges {
 }  // namespace implementation
 }  // namespace V2_0
 }  // namespace livedisplay
-}  // namespace lineage
+}  // namespace mokee
 }  // namespace vendor
 
-#endif  // VENDOR_LINEAGE_LIVEDISPLAY_V2_0_SDM_TYPES_H
+#endif  // VENDOR_MOKEE_LIVEDISPLAY_V2_0_SDM_TYPES_H

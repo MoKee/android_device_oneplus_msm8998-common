@@ -29,13 +29,13 @@ cc_defaults {
         "libhidlbase",
         "libhidltransport",
         "libutils",
-        "vendor.lineage.livedisplay@2.0",
+        "vendor.mokee.livedisplay@2.0",
     ],
 }
 
 cc_binary {
-    name: "vendor.lineage.livedisplay@2.0-service.oneplus_msm8998",
-    init_rc: ["vendor.lineage.livedisplay@2.0-service.oneplus_msm8998.rc"],
+    name: "vendor.mokee.livedisplay@2.0-service.oneplus_msm8998",
+    init_rc: ["vendor.mokee.livedisplay@2.0-service.oneplus_msm8998.rc"],
     defaults: ["livedisplay_oneplus_msm8998"],
     proprietary: true,
 }
