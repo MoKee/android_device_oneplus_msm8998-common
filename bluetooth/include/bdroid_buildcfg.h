@@ -31,7 +31,7 @@
 static inline const char *BtmGetDefaultName()
 {
     char product_device[PROPERTY_VALUE_MAX];
-    property_get("ro.lineage.device", product_device, "");
+    property_get("ro.mk.device", product_device, "");
 
     if (strstr(product_device, "cheeseburger"))
         return "OnePlus 5";

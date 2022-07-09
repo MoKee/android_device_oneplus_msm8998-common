@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "vendor.lineage.livedisplay@2.0-service.oneplus_msm8998"
+#define LOG_TAG "vendor.mokee.livedisplay@2.0-service.oneplus_msm8998"
 
 #include <android-base/logging.h>
 #include <binder/ProcessState.h>
@@ -24,12 +24,12 @@
 #include "AdaptiveBacklight.h"
 #include "DisplayModes.h"
 
-using ::vendor::lineage::livedisplay::V2_0::IDisplayModes;
-using ::vendor::lineage::livedisplay::V2_0::IPictureAdjustment;
-using ::vendor::lineage::livedisplay::V2_0::implementation::DisplayModes;
-using ::vendor::lineage::livedisplay::V2_0::sdm::AdaptiveBacklight;
-using ::vendor::lineage::livedisplay::V2_0::sdm::PictureAdjustment;
-using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
+using ::vendor::mokee::livedisplay::V2_0::IDisplayModes;
+using ::vendor::mokee::livedisplay::V2_0::IPictureAdjustment;
+using ::vendor::mokee::livedisplay::V2_0::implementation::DisplayModes;
+using ::vendor::mokee::livedisplay::V2_0::sdm::AdaptiveBacklight;
+using ::vendor::mokee::livedisplay::V2_0::sdm::PictureAdjustment;
+using ::vendor::mokee::livedisplay::V2_0::sdm::SDMController;
 
 int main() {
     std::shared_ptr<SDMController> controller = std::make_shared<SDMController>();

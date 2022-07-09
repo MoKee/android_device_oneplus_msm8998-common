@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-#ifndef VENDOR_LINEAGE_LIVEDISPLAY_V2_0_ADAPTIVEBACKLIGHT_H
-#define VENDOR_LINEAGE_LIVEDISPLAY_V2_0_ADAPTIVEBACKLIGHT_H
+#ifndef VENDOR_MOKEE_LIVEDISPLAY_V2_0_ADAPTIVEBACKLIGHT_H
+#define VENDOR_MOKEE_LIVEDISPLAY_V2_0_ADAPTIVEBACKLIGHT_H
 
-#include <vendor/lineage/livedisplay/2.0/IAdaptiveBacklight.h>
+#include <vendor/mokee/livedisplay/2.0/IAdaptiveBacklight.h>
 
 namespace vendor {
-namespace lineage {
+namespace mokee {
 namespace livedisplay {
 namespace V2_0 {
 namespace sdm {
@@ -31,7 +31,7 @@ class AdaptiveBacklight : public IAdaptiveBacklight {
   public:
     static bool isSupported();
 
-    // Methods from ::vendor::lineage::livedisplay::V2_0::IAdaptiveBacklight follow.
+    // Methods from ::vendor::mokee::livedisplay::V2_0::IAdaptiveBacklight follow.
     Return<bool> isEnabled() override;
     Return<bool> setEnabled(bool enabled) override;
 
@@ -42,7 +42,7 @@ class AdaptiveBacklight : public IAdaptiveBacklight {
 }  // namespace sdm
 }  // namespace V2_0
 }  // namespace livedisplay
-}  // namespace lineage
+}  // namespace mokee
 }  // namespace vendor
 
-#endif // VENDOR_LINEAGE_LIVEDISPLAY_V2_0_ADAPTIVEBACKLIGHT_H
+#endif // VENDOR_MOKEE_LIVEDISPLAY_V2_0_ADAPTIVEBACKLIGHT_H

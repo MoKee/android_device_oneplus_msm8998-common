@@ -67,14 +67,14 @@ android::status_t SendDppsCommand(const char* cmd) {
 }  // anonymous namespace
 
 namespace vendor {
-namespace lineage {
+namespace mokee {
 namespace livedisplay {
 namespace V2_0 {
 namespace sdm {
 
 using ::android::base::GetBoolProperty;
 
-// Methods from ::vendor::lineage::livedisplay::V2_0::IAdaptiveBacklight follow.
+// Methods from ::vendor::mokee::livedisplay::V2_0::IAdaptiveBacklight follow.
 Return<bool> AdaptiveBacklight::isEnabled() {
     return mEnabled;
 }
@@ -95,5 +95,5 @@ Return<bool> AdaptiveBacklight::setEnabled(bool enabled) {
 }  // namespace sdm
 }  // namespace V2_0
 }  // namespace livedisplay
-}  // namespace lineage
+}  // namespace mokee
 }  // namespace vendor

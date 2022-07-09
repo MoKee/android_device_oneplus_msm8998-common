@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.pocketmode;
+package org.mokee.pocketmode;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -48,7 +48,7 @@ public class ProximitySensor implements SensorEventListener {
         mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
         mExecutorService = Executors.newSingleThreadExecutor();
 
-        switch (SystemProperties.get("ro.lineage.device", "")) {
+        switch (SystemProperties.get("ro.mk.device", "")) {
             case "cheeseburger":
                 FPC_FILE = "/sys/devices/soc/soc:fpc_fpc1020/proximity_state";
                 break;
